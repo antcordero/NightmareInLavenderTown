@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender Town's Nightmare</title>
+    <link rel="stylesheet" href="./css/LavenderTownNightmare.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <script src="./js/lavendertownnightmare.js"></script>
+</head>
+
+<body>
+
+    <div id= "scenario">
+
+        <!-- Main scenario, text and sound effect -->
+
+        <p id="text"> <br> Welcome to <br> Lavender Town</p>
+        <p class="cautionText">(beware of the ghosts)</p>
+
+        <p id="cave" class="textPosition">But no matter what, don't you dare enter the cave. They can curse you</p>
+        
+        <p id="pokecenter" class="textPosition"></pid>Don't go to the Pokecenter, it's closed due to strange spooky activity</p>
+        
+        <p id="house" class="textPosition"></pid>Don't go to the houses, there is a strange being that sucks the soul of those who approach</p>
+
+        <p id="mart" class="textPosition">Don't go to the PokeMart, several disappearances have been reported in this area</p>
+        
+
+        <div class="audioButton">
+            <audio controls id="playButton">
+                <source src="./sounds/lavender_town_theme.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    
+        <!-- Ghost appearance and sound effect -->
+
+        <div id="cave" onclick="show('ghost');sound('ghost_voice')" ondblclick="hide('ghost');silence('ghost_voice')">
+            <img id="ghost" src="./img/Lavender_Town_ghost_gif_resize3.gif" alt="ghost_gif">    
+        </div>
+
+        <audio id="ghost_voice"> 
+            <source src="./sounds/ghost_voice.mp3" type="audio/mp3"></source>
+        </audio>
+
+        <!-- Gastly appearance and sound effect -->
+
+        <div id="pokecenter" onmouseover="show('gastly');sound('gastly_cry')" onmouseout="hide('gastly');silence('gastly_cry')">
+            <img id="gastly" src="./img/gastly.gif" alt="gastly_gif">
+        </div>
+
+        <audio id="gastly_cry"> 
+            <source src="./sounds/gastly_cry.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- Haunter appearance and sound effect -->
+
+        <div id="house" onmouseover="show('haunter');sound('haunter_cry')" onmouseout="hide('haunter');silence('haunter_cry')">
+            <img id="haunter" src="./img/haunter_gif.gif" alt="haunter_gif">    
+        </div>
+
+        <audio id="haunter_cry"> 
+            <source src="./sounds/haunter_cry.mp3" type="audio/mp3"></source>
+        </audio>
+
+        <!-- Gengar appearance and sound effect -->
+
+        <div id="mart" onmouseover="show('gengar');sound('gengar_cry')" onmouseout="hide('gengar');silence('gengar_cry')">
+            <img id="gengar" src="./img/gengar_gif.gif" alt="gengar_gif">    
+        </div>
+
+        <audio id="gengar_cry"> 
+            <source src="./sounds/gengar_cry.mp3" type="audio/mp3"></source>
+        </audio>
+
+
+    </div>
+
+</body>
+</html>
