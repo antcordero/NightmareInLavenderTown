@@ -1,9 +1,8 @@
 /*********************************************************
- * js functions for Nightmare Before Crhistmas exercise
+ * js functions exercise
  * author: Antonio Cordero Molina
  * version: 1.0
- * date november 2023
- * comment: my first exercise with JavaScript
+ * date 30/11/2024
  * *******************************************************/
 
 function show(element) {
